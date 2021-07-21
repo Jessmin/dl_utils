@@ -1,0 +1,109 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "split_dataset",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/convert_Dataset/split_dataset.py",
+            "console": "integratedTerminal",
+            "args": [
+                "/home/zhaohj/Documents/dataset/signed_dataset/YMDS",
+                "0.3",
+                "--mode",
+                "seg"
+            ]
+        },
+        {
+            "name": "lableme2VOC",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/convert_Dataset/labelme2voc.py",
+            "console": "integratedTerminal",
+            "args": [
+                "/home/zhaohj/Documents/dataset/signed_dataset/YMDS/labelme",
+                "/home/zhaohj/Documents/dataset/signed_dataset/YMDS/labelme/VOC-v2",
+                "--labels",
+                "/home/zhaohj/Documents/dataset/signed_dataset/YMDS/label_names.txt",
+                "--label_dict",
+                "/home/zhaohj/Documents/dataset/signed_dataset/YMDS/label_dict.txt"
+            ]
+        },
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: Module",
+            "type": "python",
+            "request": "launch",
+            "module": "enter-your-module-name"
+        },
+        {
+            "name": "transfer paddle",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/ocr_evaluation/transfer_paddle.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--i",
+                // "/home/zhaohj/Documents/dataset/compare/test_img_compress",
+                // "/home/zhaohj/Documents/dataset/compare/test_img",
+                // "/home/zhaohj/Documents/dataset/compare/test_img_webp",
+                "/home/zhaohj/Documents/dataset/compare/test_webp_IOS",
+                // "/home/zhaohj/Documents/dataset/compare/test_img_webp_IOS_now/rule",
+                "--o",
+                // "/home/zhaohj/Documents/dataset/compare/test_img/result"
+                // "/home/zhaohj/Documents/dataset/compare/test_img_webp/result",
+                "/home/zhaohj/Documents/dataset/compare/test_webp_IOS/result"
+                // "/home/zhaohj/Documents/dataset/compare/test_img_webp_IOS_now/rule/result"
+            ]
+        },
+        {
+            "name": "transfer pplabel",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/ocr_evaluation/transfer_pplabel.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--i",
+                "/home/zhaohj/Documents/dataset/标注/Label.txt",
+                "--o",
+                "/home/zhaohj/Documents/dataset/标注/gt"
+            ]
+        },
+        {
+            "name": "evaluation",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/ocr_evaluation/run.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--gt",
+                "/home/zhaohj/Documents/dataset/标注/gt",
+                "--subm",
+                // "/home/zhaohj/Documents/dataset/compare/test_img_compress/result"
+                // "/home/zhaohj/Documents/dataset/compare/test_img/result",
+                // "/home/zhaohj/Documents/dataset/compare/test_img_webp/result",
+                // "/home/zhaohj/Documents/dataset/compare/test_img_webp_IOS/result"
+                // "/home/zhaohj/Documents/dataset/compare/test_img_webp_IOS_now/result"
+                "/home/zhaohj/Documents/dataset/compare/test_webp_IOS/result"
+                // "/home/zhaohj/Documents/dataset/compare/test_img/result"
+                // "/home/zhaohj/Documents/workspace/github/dl_utils/ocr_val/predict/ocr_validation"
+            ]
+        }
+    ]
+}
