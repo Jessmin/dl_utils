@@ -97,6 +97,7 @@ def get_rotate_imgs():
         src_img = cv2.imread(src_img_path)
         imag = run(src_img)
         cv2.imwrite(output_filepath, imag)
+        break
 
 
 if __name__ == '__main__':

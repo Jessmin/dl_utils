@@ -5,7 +5,7 @@ import os
 import pylab
 
 pylab.rcParams['figure.figsize'] = (8.0, 10.0)
-data_dir = '/home/zhaohj/Documents/dataset/Table/TableBank/TableBank/Detection'
+data_dir = '/home/zhaohj/Documents/dataset/Table/TableBank/TableBank/COCO'
 annFile = f'{data_dir}/annotations/tablebank_latex_test.json'
 coco = COCO(annFile)
 # display COCO categories and supercategories
